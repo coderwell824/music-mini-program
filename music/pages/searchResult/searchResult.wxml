@@ -1,0 +1,10 @@
+<scroll-view scroll-y class="listScroll">
+      <view class="listItem" wx:for="{{songs}}"  wx:key="id" >
+        <image src="/static/images/logo.png"></image>
+        <view class="musicInfo">
+          <text>{{item.name}}</text>
+          <text>{{item.artists[0].name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo"></text>
+      </view>
+    </scroll-view>

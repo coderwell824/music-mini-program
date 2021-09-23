@@ -1,0 +1,159 @@
+
+.songContainer{
+  height: 100%;
+  background-color: rgba(58, 89, 109, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .author{
+  color: #fff;
+  display: block;
+  margin:15rpx 0;
+}
+/* 底座样式 */
+.circle{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+/* 摇杆样式 */
+.needle{
+  width: 192rpx;
+  height: 274rpx;
+  position: relative;
+  left: 60rpx;
+  top: -40rpx;
+  z-index: 99;
+  transform-origin: 40rpx 0;
+  transform:rotate(-20deg);
+  transition: transform 1s;
+}
+.needleRotate{
+  transform: rotate(0deg);
+
+}
+.discAnimation{
+  animation: disc 8s linear infinite;
+  animation-delay: 1s;
+}
+.songNameAnimation{
+  animation:songName 10s linear infinite ;
+  transition: transform  2s;
+}
+
+@keyframes disc{
+    from {
+      transform: rotate(0deg);
+    }to{
+      transform: rotate(360deg);
+    }
+}
+@keyframes songName{
+  0%{
+    transform:translateX(0rpx);
+  }
+  50%{
+    transform:translateX(80rpx);
+  }
+  51%{
+    transform:translateX(0rpx);
+  }
+  100%{
+    transform:translateX(80rpx);
+  }
+}
+
+/* 磁盘 */
+.disContainer{
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+
+}
+.disContainer .disc{
+  width: 100%;
+  height: 100%;
+}
+.disContainer .musicImg{
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+/* 底部控制区域 */
+.musicControl {
+  position: absolute;
+  bottom: 80rpx;
+  left: 0;
+  border-top: 1rpx solid #fff;
+  width: 100%;
+  display: flex;
+
+}
+
+.musicControl  text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.musicControl  text.big{
+  font-size: 80rpx;
+}
+
+
+/* 进度条控制区域 */
+.progressControl {
+  position: absolute;
+  bottom: 220rpx;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.barControl {
+  position: relative;
+  width: 450rpx;
+  height: 4rpx;
+  background: rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+
+.audio-currentTime-Bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 4rpx;
+  background: red;
+
+}
+
+/* 小圆球 */
+.audio-circle {
+  position: absolute;
+  right: -12rpx;
+  top: -4rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+

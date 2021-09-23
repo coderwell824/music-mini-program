@@ -1,0 +1,139 @@
+/* 轮播图区域 */
+.banners{
+  width: 100%;
+  height: 300rpx;
+}
+.banners image{
+  height: 100%;
+  width: 100%;
+}
+/* 导航区域 */
+.navContainer{
+  display: flex;
+
+}
+.navItem{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 50rpx;
+  background-color: rgb(244, 19, 19);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  margin: 20rpx 0;
+}
+.navItem text:nth-child(2){
+  font-size: 28rpx;
+}
+/* 推荐歌曲区域 */
+.recommendContainer{
+  margin:20rpx;
+}
+
+/* 内容区域 */
+.recommendContent{
+  display: flex;
+  height: 300rpx; /* 因为scroll-view 标签即使开启了横向滑动,也会有大量的空白区域,需要设置一定的高度 */
+}
+.scrollItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200rpx;
+  margin:8rpx;
+}
+.scrollItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.scrollItem text{
+  /* 单行文本溢出,省略号代替 
+  white-space: nowrap;
+  overflow: hidden;   只能作用在块元素上 
+  display: block;
+  text-overflow: ellipsis;
+  */
+  /* 
+    多行文本溢出,省略号代替
+  */
+  font-size: 25rpx;
+  display: -webkit-box;             
+  -webkit-box-orient:vertical;     
+  overflow:hidden;                  
+  -webkit-line-clamp:2;             
+  text-overflow: ellipsis;          
+}
+/* 排行榜 */
+.topList{
+  margin: 20rpx;
+}
+.swiperItem{
+  background-color: #fbfbfb;
+  width: 90%;
+}
+.musicItem{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;/* 当一个元素设置为flex盒模型以后其子元素(后代元素)会自动转换为block */
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.topListswiper{
+  height: 380rpx;
+  margin-top: 10rpx;
+}
+/* 排行榜轮播图区域 */
+.musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.musicItem .order{
+  width: 100rpx;
+  text-align: center;
+}
+.songName{
+  font-size: 25rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

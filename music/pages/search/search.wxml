@@ -1,0 +1,20 @@
+<view class="header">
+    <view class="container">
+      <view class="iconfont icon-search"></view>
+      <input type="text" class="searchKeyword" placeholder="搜索歌曲" model:value="{{keywords}}" />
+      <view class="search" bindtap="goSearch">搜索</view>
+    </view>
+    <view class="content">
+      <view class="title">历史搜索</view>
+          <view class="keywords">
+            <text class="keyword">你的答案</text>
+            <text class="keyword">起风了</text>
+            <text class="keyword">国王与乞丐</text>
+            <text class="keyword">经济舱</text>
+            <text class="keyword">大城小爱</text>
+            <text class="keyword">小小的太阳</text>
+            <text class="keyword">我们的歌</text>
+            <text class="keyword">稻香</text>
+          </view>
+    </view>
+</view>
